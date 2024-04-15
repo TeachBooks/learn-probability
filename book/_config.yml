@@ -37,3 +37,20 @@ html:
       </div>
 #  use_issues_button: true
 #  use_repository_button: true
+
+# this is for the interactive part (everything above is "old")
+sphinx:
+  config:
+    html_show_copyright: true
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    thebe_config:
+      use_thebe_lite: true
+      exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
+  extra_extensions:
+    - sphinx.ext.imgconverter
+    - download_link_replacer
+    - jupyterbook_patches
+
+bibtex_bibfiles: 
+  - references.bib
